@@ -172,6 +172,68 @@ After selecting the strongest main architecture, a secondary ablation evaluates 
 
 ---
 
+## Results
+
+### Final Test Performance
+
+| Metric | Value |
+|---|---:|
+| Tumor Dice | 0.8103 |
+| Tumor IoU | 0.7163 |
+| Tumor Precision | 0.8260 |
+| Tumor Recall | 0.8628 |
+| Specificity | 0.9951 |
+| Median Tumor Dice | 0.8831 |
+| Missed Tumor Rate | 2.34% |
+
+### Dataset Split
+
+| Split | Patients | Images | Tumor Images | Tumor Image % |
+|---|---:|---:|---:|---:|
+| Train | 88 | 3165 | 1092 | 34.50 |
+| Validation | 11 | 409 | 153 | 37.41 |
+| Test | 11 | 355 | 128 | 36.06 |
+
+The dataset was split at the patient level to prevent patient leakage between training, validation, and test sets.
+
+### ASPP and Deep Supervision Ablation
+
+| Configuration | Tumor Dice | Tumor IoU |
+|---|---:|---:|
+| ASPP + Deep Supervision | **0.8103** | **0.7163** |
+| Deep Supervision only | 0.8058 | 0.7121 |
+| No ASPP / No Deep Supervision | 0.8014 | 0.7036 |
+| ASPP only | 0.7938 | 0.6987 |
+
+### Training Dynamics
+
+Training and validation loss:
+
+![Training loss curves](results/Figures/training_loss_curves.png)
+
+Training and validation tumor Dice:
+
+![Training Dice curves](results/Figures/training_dice_curves.png)
+
+### Representative Predictions
+
+Representative test cases including difficult, typical, successful, and no-tumor examples:
+
+![Representative test predictions](results/Figures/representative_predictions.png)
+
+### Dataset Examples
+
+Example MRI slices and corresponding segmentation masks:
+
+![Dataset examples](results/Figures/dataset_examples.png)
+
+### Grad-CAM Explainability
+
+Grad-CAM visualization for a successfully segmented tumor case:
+
+![Grad-CAM example](results/Figures/gradcam_best_case.png)
+
+
 ## Installation
 
 Install the required Python packages with:
