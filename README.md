@@ -324,22 +324,14 @@ It demonstrates:
 - Threshold optimization
 - Model interpretability with Grad-CAM
 
-This project is intended for research and portfolio purposes and is not intended for clinical use.---
-
-## Project Scope
-
-This repository is intended as an experimental computer vision and medical image segmentation project.
-
-It demonstrates:
-
-- Deep learning model development
-- Configurable neural network architecture design
-- Controlled ablation studies
-- Patient-level data splitting
-- Segmentation evaluation
-- Reproducible experimentation
-- Error analysis
-- Threshold optimization
-- Model interpretability with Grad-CAM
-
 This project is intended for research and portfolio purposes and is not intended for clinical use.
+
+---
+
+
+## Limitations
+
+- The experiments were performed on a single public LGG MRI dataset and were not externally validated on an independent clinical dataset.
+- The model performs binary tumor segmentation and does not distinguish between tumor subregions or tumor types.
+- Performance varies across individual cases, including a small number of completely missed tumors.
+- The reported results are intended for research and portfolio purposes and should not be interpreted as clinical validation or a diagnostic system.
