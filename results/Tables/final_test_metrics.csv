@@ -1,0 +1,8 @@
+metric,value
+Tumor Dice,0.810327
+Tumor IoU,0.716342
+Tumor Precision,0.826042
+Tumor Recall,0.862764
+Specificity,0.995066
+Median Tumor Dice,0.883102
+Missed Tumor Rate,0.023438
